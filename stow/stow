@@ -1,0 +1,22 @@
+GNU Stow is a utility to manage dot files
+
+For reference on how to manage dotfiles using GNU Stow
+https://www.youtube.com/watch?v=zhdO46oqeRw
+http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
+
+Basic Working of stow
+Go to the root directory where all the dotfiles are located
+
+# To stow config of say zsh to $HOME directory
+stow -v -t $HOME zsh
+-v is for verbose
+-t is the target directory
+
+# Delete symlinks for particular package
+stow -D -v -t $HOME zsh
+-D delete
+
+# If you add / remove some files in a particular directory and want to sync again
+stow -R -v -t $HOME zsh
+-R restow (Reapply)
+
